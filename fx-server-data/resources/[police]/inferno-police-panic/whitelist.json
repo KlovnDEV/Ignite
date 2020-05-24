@@ -1,0 +1,9 @@
+[
+	{
+		"steamhex"			:	"steam:11000010E1A98B9"
+		"panic"				:	true,
+		"panictune"			:	true,
+		"panicwhitelist"	: 	true,
+		"autotune"			:	true
+	}
+]

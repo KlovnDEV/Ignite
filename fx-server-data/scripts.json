@@ -1,0 +1,11 @@
+{
+	"name": "Ignite",
+	"author": "Liam",
+	"website": "https://scktz.cc",
+	"resources": {
+		"esx-org/es_extended": "1.1.0"
+	},
+	"folder": {
+		"esx-org/es_extended": "essential"
+	}
+}

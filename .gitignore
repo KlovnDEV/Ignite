@@ -2545,3 +2545,9 @@ fx-server-data/resources/[cars]/ferrari/stream/laferrari+hi.ytd
 fx-server-data/resources/[cars]/ferrari/stream/laferrari.yft
 fx-server-data/resources/[cars]/ferrari/stream/laferrari.ytd
 fx-server-data/resources/[cars]/ferrari/stream/laferrari_hi.yft
+*.meta
+*.ymf
+*.yft
+*.yft
+*.ydr
+*.ytd
