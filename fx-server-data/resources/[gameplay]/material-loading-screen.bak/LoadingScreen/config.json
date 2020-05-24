@@ -1,0 +1,42 @@
+[
+	{
+		"useBackgroundColour" : "true",
+		"backgroundColour" : "20,20,20",
+		"useBackgroundImage" : "true",
+		"backgroundImagePath" : "https://media.rockstargames.com/rockstargames/img/global/news/upload/6_gtavpc_03272015.jpg",
+		"useTextColour" : "false",
+		"textColour" : "0,0,0",
+		"useBoldText" : "false",
+		"serverTitle" : "Entering World!",
+		"playAudioInBackground" : "false",
+		"YTVideoID" : "Ob3_6FCZ_pY",
+		"videoVolume" : "2"
+	},
+	{
+		"rule1" : "You are required to have a Microphone",
+		"rule2" : "No RDM / VDM",
+		"rule3" : "No Metagaming / Powergaming",
+		"rule4" : "No Rasicm / Vuglar language in Chat",
+		"rule5" : "Respect other peoples privacy",
+		"rule6" : "Be friendly, there's no need to be toxic",
+		"rule7" : "Use your common sense & have fun!"
+	},
+	{
+		"servers1" : "Website: https://scktz.cc/",
+		"servers2" : "Teamspeak: Coming Soon!",
+		"servers3" : "Discord: http://discord.gg/EFyMWwu",
+		"servers4" : "",
+		"servers5" : "",
+		"servers6" : "",
+		"servers7" : ""
+	},
+	{
+		"content1" : "Whitelisted Jobs (PD, EMS, Mechanic)",
+		"content2" : "Whitelisted Gangs",
+		"content3" : "Store Robberies",
+		"content4" : "Drugs / Black Market / Money Laundering",
+		"content5" : "Enhanced Banking System",
+		"content6" : "Custom Vehicle Models",
+		"content7" : "Mobile Phone Calling & Messaging"
+	}
+]

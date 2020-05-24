@@ -1,0 +1,42 @@
+[
+	{
+		"useBackgroundColour" : "true",
+		"backgroundColour" : "20,20,20",
+		"useBackgroundImage" : "true",
+		"backgroundImagePath" : "https://media.rockstargames.com/rockstargames/img/global/news/upload/6_gtavpc_03272015.jpg",
+		"useTextColour" : "false",
+		"textColour" : "0,0,0",
+		"useBoldText" : "false",
+		"serverTitle" : "Loading you in now, hang on!",
+		"playAudioInBackground" : "true",
+		"YTVideoID" : "Ob3_6FCZ_pY",
+		"videoVolume" : "1"
+	},
+	{
+		"rule1" : "You are required to have a Microphone",
+		"rule2" : "No RDM / VDM / Fail-RP",
+		"rule3" : "No Metagaming / Powergaming",
+		"rule4" : "Dont be abusive via chat",
+		"rule5" : "No mic spamming / chat spamming",
+		"rule6" : "Be friendly, no one likes toxicity",
+		"rule7" : "Respect other players & have fun!"
+	},
+	{
+		"servers1" : "Website: https://scktz.cc/",
+		"servers2" : "Teamspeak: Coming Soon!",
+		"servers3" : "Discord: http://discord.gg/EFyMWwu",
+		"servers4" : "",
+		"servers5" : "",
+		"servers6" : "",
+		"servers7" : ""
+	},
+	{
+		"content1" : "Whitelisted Jobs (PD, EMS, Mechanic)",
+		"content2" : "Whitelisted Gangs",
+		"content3" : "Store/Bank Robberies",
+		"content4" : "Drugs / Black Market / Money Laundering",
+		"content5" : "Enhanced Banking System",
+		"content6" : "Custom Vehicle Models / ELS / Clothing",
+		"content7" : "Mobile Phone Calling & Messaging"
+	}
+]
