@@ -1,3 +1,5 @@
-Spaff in my mouth pls xDDDDD
+# Ignite RP
+### A Private Project by Liam & Midnight
 
-this is a comment from liam
+* Information
+- Built Upon ESX
