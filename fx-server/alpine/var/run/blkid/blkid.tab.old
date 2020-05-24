@@ -1,2 +1,0 @@
-<device DEVNO="0xfc01" TIME="1590041172.142623" LABEL="cloudimg-rootfs" UUID="cd899ca9-1943-46c8-9c55-42fc136ef940" TYPE="ext4" PARTUUID="2f441e81-315b-4f69-8176-3c7b8a16729a">/dev/vda1</device>
-<device DEVNO="0xfc0f" TIME="1588216980.939429" LABEL="UEFI" UUID="66CA-0134" TYPE="vfat" PARTUUID="cddf6177-2b9b-4d68-9685-58a5ef523881">/dev/vda15</device>
