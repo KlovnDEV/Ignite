@@ -6,23 +6,6 @@ var questions = [
   {question:"Gender M/F", pattern: /^m$|^f$|^M$|^F$|^Male$|^Female$|^male$|^female$/}
 ]
 
-/**********
-
-  !!!!!
-  New Version: https://codepen.io/arcs/pen/rYXrNQ
-  !!!!!
-  
-  Credits for the design go to XavierCoulombeM
-  https://dribbble.com/shots/2510592-Simple-register-form
-  
-  This Pen uses no libraries except fonts and should 
-  work on all modern browsers
-  
-  The answers are stored in the `questions` array
-  with the key `value`. 
-
- **********/
-
 ;(function(){
 
   var tTime = 100  // transition transform time from #register in ms
@@ -76,7 +59,7 @@ var questions = [
 	
 	if (questions[4].value == 'm' || questions[4].value == 'M' || questions[4].value == 'Male' || questions[4].value == 'male') {
 		gender = 'm';
-	}else if (questions[4].value == 'f' || questions[4].value == 'F' || questions[4].value == 'female' || questions[4].value == 'Female'){
+	} else if (questions[4].value == 'f' || questions[4].value == 'F' || questions[4].value == 'female' || questions[4].value == 'Female'){
 		gender = 'f';
 	}
 	
