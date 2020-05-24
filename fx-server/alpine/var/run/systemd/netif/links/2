@@ -1,0 +1,13 @@
+# This is private data. Do not parse.
+ADMIN_STATE=configured
+OPER_STATE=routable
+REQUIRED_FOR_ONLINE=yes
+NETWORK_FILE=/run/systemd/network/10-netplan-eth0.network
+DNS=67.207.67.3 67.207.67.2
+NTP=
+DOMAINS=
+ROUTE_DOMAINS=
+LLMNR=yes
+MDNS=no
+ADDRESSES=10.16.0.7/16 167.71.129.84/20
+ROUTES=0.0.0.0/0/0/0/254/18446744073709551615

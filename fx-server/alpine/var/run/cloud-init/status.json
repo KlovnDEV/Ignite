@@ -1,0 +1,31 @@
+{
+ "v1": {
+  "datasource": "DataSourceDigitalOcean",
+  "init": {
+   "errors": [],
+   "finished": 1588216985.9853928,
+   "start": 1588216985.4580486
+  },
+  "init-local": {
+   "errors": [],
+   "finished": 1588216983.0074089,
+   "start": 1588216982.7881463
+  },
+  "modules-config": {
+   "errors": [],
+   "finished": 1588216987.6030343,
+   "start": 1588216987.465075
+  },
+  "modules-final": {
+   "errors": [],
+   "finished": 1588216988.2480412,
+   "start": 1588216988.1088653
+  },
+  "modules-init": {
+   "errors": [],
+   "finished": null,
+   "start": null
+  },
+  "stage": null
+ }
+}

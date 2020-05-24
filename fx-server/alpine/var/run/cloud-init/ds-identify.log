@@ -1,0 +1,31 @@
+[up 8.49s] ds-identify 
+policy loaded: mode=search report=false found=all maybe=all notfound=disabled
+/etc/cloud/cloud.cfg.d/99-digitalocean.cfg set datasource_list: [ ConfigDrive, DigitalOcean, NoCloud, None ]
+DMI_PRODUCT_NAME=Droplet
+DMI_SYS_VENDOR=DigitalOcean
+DMI_PRODUCT_SERIAL=176742141
+DMI_PRODUCT_UUID=60A8A3CB-4ED8-4D43-A071-BF00FF8B59CC
+PID_1_PRODUCT_NAME=unavailable
+DMI_CHASSIS_ASSET_TAG=
+FS_LABELS=cloudimg-rootfs,UEFI
+ISO9660_DEVS=
+KERNEL_CMDLINE=BOOT_IMAGE=/boot/vmlinuz-4.15.0-96-generic root=UUID=cd899ca9-1943-46c8-9c55-42fc136ef940 ro console=tty1 console=ttyS0
+VIRT=kvm
+UNAME_KERNEL_NAME=Linux
+UNAME_KERNEL_RELEASE=4.15.0-96-generic
+UNAME_KERNEL_VERSION=#97-Ubuntu SMP Wed Apr 1 03:25:46 UTC 2020
+UNAME_MACHINE=x86_64
+UNAME_NODENAME=ignite
+UNAME_OPERATING_SYSTEM=GNU/Linux
+DSNAME=
+DSLIST=ConfigDrive DigitalOcean NoCloud None
+MODE=search
+ON_FOUND=all
+ON_MAYBE=all
+ON_NOTFOUND=disabled
+pid=377 ppid=354
+is_container=false
+is_ds_enabled(IBMCloud) = false.
+check for 'DigitalOcean' returned found
+Found single datasource: DigitalOcean
+[up 8.53s] returning 0
