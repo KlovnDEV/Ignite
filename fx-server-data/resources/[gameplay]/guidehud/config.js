@@ -1,5 +1,5 @@
 var config = {
-  'title': 'Ignite Roleplay - "A Premium Roleplay Experience" - By Midnight & Liam - Prod Build',
+  'title': 'Ignite Roleplay - Development Server',
   'welcomeMessage': 'Latest Updates',
 
   // Add images for the loading screen background.
@@ -13,7 +13,7 @@ var config = {
     't-yCg-0-baE', '2l5qA8w9ack', 'pln7NWRA1dE'
   ],
   // Change music volume 0-100.
-  musicVolume: 3.5,
+  musicVolume: 1.5,
   // Change Discord settings and link.
   'discord': {
     'show': true,
@@ -34,7 +34,7 @@ var config = {
 
 // Home page annountments.
 var announcements = [
-  'New Phone Ringtone','Minor Performance Updates','Ethereum Price Reduced','Xanax, Valium & Ketamine Drugs Added','Fixed Voice bug with Phone','Vehicle Recalling Increased from $100 -> $5000','Lockpicks are now a usable item', 'Performance Updates', 'View ID on HUD', 'Police Uniform Fixed', 'Drug Prices Tweaked', 'Mechanic Job Reworked', 'Custom Car Dealership Fixed', 'Realistic Handling Re-Added' , 'Crypto Mining Changes', 'Economy Tweaks/Gameplay Balancing' 
+  'Character Creation Updated'
 ]
 
 
