@@ -21,6 +21,8 @@ Citizen.CreateThread(function()
         local ped = GetPlayerPed(-1)
 
         if not IsPedDeadOrDying(ped, 1) then
+            -- PGUP 
+            -- only annoying for devs :( 
             if IsControlJustPressed(1, 10) and GetLastInputMethod(2) then
                 OpenMobileAIOActionsMenu()
             end
@@ -39,9 +41,7 @@ function OpenMobileAIOActionsMenu()
         align    = 'bottom-right',
         elements = {
             {label = _U('interactions_menu'), value = 'interactions_menu'},
-            {label = _U('vehicle_menu'), value = 'vehicle_menu'},
-            {label = _U('esx_menu'), value = 'esx_menu'},
-            {label = _U('jobs_menu'), value = 'jobs_menu'}
+            {label = _U('vehicle_menu'), value = 'vehicle_menu'}
         }
     }, function(data, menu)
         if data.current.value == 'interactions_menu' then
@@ -74,9 +74,9 @@ function OpenMobileAIOActionsMenu()
                 elseif data.current.value == 'show_id' then
                     local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
 
-                    if closestPlayer == -1 or closestDistance > 2.0 then
+                    if closestPlayer == -1 or closestDistance > 3.0 then
                         ESX.ShowNotification(_U('no_players'))
-                    elseif closestPlayer ~= -1 and closestDistance <= 2.0 then
+                    elseif closestPlayer ~= -1 and closestDistance <= 3.0 then
                         TriggerServerEvent('esx_aiomenu:showID', GetPlayerServerId(PlayerId()), GetPlayerServerId(closestPlayer))
                         ESX.UI.Menu.CloseAll()
                     end
