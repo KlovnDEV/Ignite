@@ -1,6 +1,6 @@
 var questions = [
-  {question:"What's your first name?", pattern: /^[A-Z][A-Za-z]{3,}$/},
-  {question:"What's your last name?", pattern: /^[A-Z][A-Za-z]{3,}$/},
+  {question:"What's your first name?", pattern: /^[A-Z][A-Za-z]{2,}$/},
+  {question:"What's your last name?", pattern: /^[A-Z][A-Za-z]{2,}$/},
   {question:"Date of birth E.G: 23/05/2001", pattern: /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/},
   {question:"Height 140-200", pattern: /(1[4-8][0-9]|19[0-9]|200{3})/},
   {question:"Gender M/F", pattern: /^m$|^f$|^M$|^F$|^Male$|^Female$|^male$|^female$/}

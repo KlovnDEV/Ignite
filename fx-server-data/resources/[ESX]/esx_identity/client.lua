@@ -33,6 +33,7 @@ end
 --===============================================
 RegisterNetEvent("esx_identity:showRegisterIdentity")
 AddEventHandler("esx_identity:showRegisterIdentity", function()
+  Citizen.Wait(2000)
   EnableGui(true)
 end)
 
