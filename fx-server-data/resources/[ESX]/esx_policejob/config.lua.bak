@@ -87,43 +87,48 @@ Config.AuthorizedWeapons = {
 
 	officer = {
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
-		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
-	},
-
-	sergeant = {
-		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
 		{ weapon = 'WEAPON_STUNGUN', price = 0 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
 	},
 
-	intendent = {
+	sergeant = {
 		{ weapon = 'WEAPON_PISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
 		{ weapon = 'WEAPON_STUNGUN', price = 0 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
 	},
 
+	intendent = {
+		{ weapon = 'WEAPON_APPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
+		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 0 },
+		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
+		{ weapon = 'WEAPON_STUNGUN', price = 0 },
+		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
+	},
+
 	lieutenant = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
-		{ weapon = 'WEAPON_SMG', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
+		{ weapon = 'WEAPON_APPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
+		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 0 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
 		{ weapon = 'WEAPON_STUNGUN', price = 0 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
 	},
 
 	chef = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 10000 },
-		{ weapon = 'WEAPON_CARBINERIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 50000 },
-		{ weapon = 'WEAPON_SMG', components = { 2000, 6000, nil }, price = 70000 },
+		{ weapon = 'WEAPON_APPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 10000 },
+		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 50000 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 70000 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
 		{ weapon = 'WEAPON_STUNGUN', price = 500 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
 	},
 
 	boss = {
-		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
-		{ weapon = 'WEAPON_CARBINERIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
-		{ weapon = 'WEAPON_SMG', components = { 2000, 6000, nil }, price = 0 },
+		{ weapon = 'WEAPON_APPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 0 },
+		{ weapon = 'WEAPON_ADVANCEDRIFLE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 0 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 0 },
 		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
 		{ weapon = 'WEAPON_STUNGUN', price = 0 },
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 0 }
@@ -132,23 +137,27 @@ Config.AuthorizedWeapons = {
 
 Config.AuthorizedVehicles = {
 	Shared = {
-		--{ model = 'pbus', label = 'Police Prison Bus', price = 0 },
-		{ model = 'policet', label = 'Transport Van', price = 100 },
-	    --{ model = 'police2', label = 'Audi S4', price = 100 },
-        --{ model = 'police3', label = 'Ford Mondeo', price = 100 }
+		{ model = 'pbus', label = 'Police Prison Bus', price = 0 },
+		-- { model = 'police', label = 'Police Interceptor I', price = 0 },
+                { model = 'police2', label = 'Police Interceptor II', price = 0 },
+                { model = 'police3', label = 'Police Interceptor III', price = 0 }
 	},
 
 	recruit = {
+                { model = 'police2', label = 'Police Interceptor II', price = 0 },
+                { model = 'police3', label = 'Police Interceptor III', price = 0 }
 
 	},
 
 	officer = {
-		{ model = 'police3', label = 'Ford Mondeo', price = 100 }
+		{ model = 'police2', label = 'Police Interceptor II', price = 0 },
+		{ model = 'police3', label = 'Police Interceptor III', price = 0 }
 	},
 
 	sergeant = {
-		 { model = 'police2', label = 'Audi S4', price = 100 },
-         { model = 'police3', label = 'Ford Mondeo', price = 100 }
+		{ model = 'fbi', label = 'Undercover Vehicle', price = 0},
+		{ model = 'policet', label = 'Police Transporter', price = 0 },
+		{ model = 'policeb', label = 'Police Bike', price = 0 }
 	},
 
 	intendent = {
@@ -156,35 +165,29 @@ Config.AuthorizedVehicles = {
 	},
 
 	lieutenant = {
-		 { model = 'sheriff', label = 'Marked Evo 9', price = 100 },
-         { model = 'police2', label = 'Audi S4', price = 100 },
-         { model = 'police3', label = 'Ford Mondeo', price = 100 }
+		{ model = 'riot', label = 'Police Riot', price = 70000 },
+		{ model = 'fbi2', label = 'FIB SUV', price = 60000 },
+                { model = 'police2', label = 'Police Interceptor II', price = 0 },
+                { model = 'police3', label = 'Police Interceptor III', price = 0 }
 	},
 
 	chef = {
-
-		{ model = 'pbus', label = 'Police Prison Bus', price = 100 },
-        { model = 'police', label = 'Police Prison Bus', price = 100 },
-		{ model = 'police2', label = 'Police Interceptor II', price = 100 },
-		{ model = 'police3', label = 'Police Interceptor III', price = 100 },
-		{ model = 'sheriff2', label = 'BMW xDrive Unmarked', price = 100 },
-		{ model = 'fbi2', label = 'BMW x5', price = 100 },
-		{ model = 'fbi', label = 'Undercover Vehicle', price = 100 },
-		{ model = 'policeb', label = 'Police Bike', price = 100 },
-		{ model = 'sheriff', label = 'Skoda Karoq', price = 100 }
+                { model = 'police2', label = 'Police Interceptor II', price = 0 },
+                { model = 'police3', label = 'Police Interceptor III', price = 0 },
+		-- allow fbi cars too
+		{ model = 'fbi', label = 'Undercover Vehicle', price = 0},
+                { model = 'policet', label = 'Police Transporter', price = 0 },
+                { model = 'policeb', label = 'Police Bike', price = 0 }
 
 	},
 
 	boss = {
-         { model = 'pbus', label = 'Police Prison Bus', price = 100 },
-        { model = 'police', label = 'Police Prison Bus', price = 100 },
-        { model = 'police2', label = 'Police Interceptor II', price = 100 },
-        { model = 'police3', label = 'Police Interceptor III', price = 100 },
-        { model = 'sheriff2', label = 'BMW xDrive Unmarked', price = 100 },
-        { model = 'fbi2', label = 'BMW x5', price = 100 },
-        { model = 'fbi', label = 'Undercover Vehicle', price = 100 },
-	    { model = 'policeb', label = 'Police Bike', price = 100 },
-	    { model = 'sheriff', label = 'Skoda Karoq', price = 100 }
+                { model = 'pbus', label = 'Police Prison Bus', price = 0 },
+                { model = 'police2', label = 'Police Interceptor II', price = 0 },
+                { model = 'police3', label = 'Police Interceptor III', price = 0 },
+		{ model = 'fbi', label = 'Undercover Vehicle', price = 0},
+                { model = 'policet', label = 'Police Transporter', price = 0 },
+                { model = 'policeb', label = 'Police Bike', price = 0 },
 
 	}
 }
@@ -198,15 +201,17 @@ Config.AuthorizedHelicopters = {
 
 	intendent = {},
 
-	lieutenant = {},
+	lieutenant = {
+		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 200000 }
+	},
 
 	chef = {
-		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 50000 }
+		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 150000 }
 	},
 
 	boss = {
-		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 50000 }
-	}           
+		{ model = 'polmav', label = 'Police Maverick', livery = 0, price = 100000 }
+	}
 }
 
 -- CHECK SKINCHANGER CLIENT MAIN.LUA for matching elements
