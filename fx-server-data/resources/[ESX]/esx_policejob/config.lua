@@ -164,7 +164,7 @@ Config.AuthorizedVehicles = {
 	chef = {
 
 		{ model = 'pbus', label = 'Police Prison Bus', price = 100 },
-        { model = 'police', label = 'Police Prison Bus', price = 100 },
+        { model = 'police', label = 'Volvo', price = 100 },
 		{ model = 'police2', label = 'Police Interceptor II', price = 100 },
 		{ model = 'police3', label = 'Police Interceptor III', price = 100 },
 		{ model = 'sheriff2', label = 'BMW xDrive Unmarked', price = 100 },
@@ -177,7 +177,7 @@ Config.AuthorizedVehicles = {
 
 	boss = {
          { model = 'pbus', label = 'Police Prison Bus', price = 100 },
-        { model = 'police', label = 'Police Prison Bus', price = 100 },
+        { model = 'police', label = 'Volvo', price = 100 },
         { model = 'police2', label = 'Police Interceptor II', price = 100 },
         { model = 'police3', label = 'Police Interceptor III', price = 100 },
         { model = 'sheriff2', label = 'BMW xDrive Unmarked', price = 100 },
