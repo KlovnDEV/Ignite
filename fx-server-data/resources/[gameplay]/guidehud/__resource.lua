@@ -1,7 +1,6 @@
 client_script 'client/client.lua'
 
 ui_page 'HUD/ui.html'
-loadscreen 'LoadingScreen/ui.html'
 
 files {
   'config.js',
