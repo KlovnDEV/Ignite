@@ -1365,7 +1365,7 @@ RegisterNetEvent('esx_ballasjob:handcuff')
 AddEventHandler('esx_ballasjob:handcuff', function()
 
   IsHandcuffed    = not IsHandcuffed;
-  local playerPed = GetPlayerPed(-1)
+  local playerPed = GetPlayerPed()
 
   Citizen.CreateThread(function()
 
@@ -1374,19 +1374,52 @@ AddEventHandler('esx_ballasjob:handcuff', function()
       RequestAnimDict('mp_arresting')
 
       while not HasAnimDictLoaded('mp_arresting') do
-        Wait(100)
+        Citizen.Wait(100)
       end
 
       TaskPlayAnim(playerPed, 'mp_arresting', 'idle', 8.0, -8, -1, 49, 0, 0, 0, 0)
-      SetEnableHandcuffs(playerPed, true)
-      SetPedCanPlayGestureAnims(playerPed, false)
-      --FreezeEntityPosition(playerPed,  false)
+      
+      -- New Values
+      
+			SetEnableHandcuffs(playerPed, true)
+			DisablePlayerFiring(playerPed, true)
+			SetCurrentPedWeapon(playerPed, GetHashKey('WEAPON_UNARMED'), true) -- unarm player
+			SetPedCanPlayGestureAnims(playerPed, false)
+			-- FreezeEntityPosition(playerPed, false)
+			DisplayRadar(false)
+
+			if Config.EnableHandcuffTimer then
+
+				if HandcuffTimer.Active then
+					ESX.ClearTimeout(HandcuffTimer.Task)
+				end
+
+				StartHandcuffTimer()
+			end
+      
+      -- Old Values
+      -- SetEnableHandcuffs(playerPed, true)
+      -- SetPedCanPlayGestureAnims(playerPed, false)
+      -- FreezeEntityPosition(playerPed,  false)
 
     else
+      -- New
+      if Config.EnableHandcuffTimer and HandcuffTimer.Active then
+				ESX.ClearTimeout(HandcuffTimer.Task)
+			end
 
-      ClearPedSecondaryTask(playerPed)
-      SetEnableHandcuffs(playerPed, false)
-      SetPedCanPlayGestureAnims(playerPed,  true)
+			ClearPedSecondaryTask(playerPed)
+			SetEnableHandcuffs(playerPed, false)
+			DisablePlayerFiring(playerPed, false)
+			SetPedCanPlayGestureAnims(playerPed, true)
+			-- FreezeEntityPosition(playerPed, false)
+      DisplayRadar(true)
+      
+
+      -- Old 
+      -- ClearPedSecondaryTask(playerPed)
+      -- SetEnableHandcuffs(playerPed, false)
+      -- SetPedCanPlayGestureAnims(playerPed,  true)
       -- FreezeEntityPosition(playerPed, false)
 
     end
@@ -1457,6 +1490,67 @@ AddEventHandler('esx_ballasjob:OutVehicle', function(t)
   local ynew = plyPos.y+2
 
   SetEntityCoords(GetPlayerPed(-1), xnew, ynew, plyPos.z)
+end)
+
+-- New handcuff function
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(1)
+		local playerPed = PlayerPedId()
+
+		if IsHandcuffed then
+			--DisableControlAction(0, 1, true) -- Disable pan
+			--DisableControlAction(0, 2, true) -- Disable tilt
+			DisableControlAction(0, 24, true) -- Attack
+			DisableControlAction(0, 257, true) -- Attack 2
+			DisableControlAction(0, 25, true) -- Aim
+			DisableControlAction(0, 263, true) -- Melee Attack 1
+			--DisableControlAction(0, Keys['W'], true) -- W
+			--DisableControlAction(0, Keys['A'], true) -- A
+			--DisableControlAction(0, 31, true) -- S (fault in Keys table!)
+			--DisableControlAction(0, 30, true) -- D (fault in Keys table!)
+
+			DisableControlAction(0, Keys['R'], true) -- Reload
+			--DisableControlAction(0, Keys['SPACE'], true) -- Jump
+			DisableControlAction(0, Keys['Q'], true) -- Cover
+			DisableControlAction(0, Keys['TAB'], true) -- Select Weapon
+			DisableControlAction(0, Keys['F'], true) -- Also 'enter'?
+
+			DisableControlAction(0, Keys['F1'], true) -- Disable phone
+			DisableControlAction(0, Keys['F2'], true) -- Inventory
+			DisableControlAction(0, Keys['F3'], true) -- Animations
+			DisableControlAction(0, Keys['F6'], true) -- Job
+
+			--DisableControlAction(0, Keys['V'], true) -- Disable changing view
+			--DisableControlAction(0, Keys['C'], true) -- Disable looking behind
+			DisableControlAction(0, Keys['X'], true) -- Disable clearing animation
+			DisableControlAction(2, Keys['P'], true) -- Disable pause screen
+
+			DisableControlAction(0, 59, true) -- Disable steering in vehicle
+			DisableControlAction(0, 71, true) -- Disable driving forward in vehicle
+			DisableControlAction(0, 72, true) -- Disable reversing in vehicle
+
+			DisableControlAction(2, Keys['LEFTCTRL'], true) -- Disable going stealth
+
+			DisableControlAction(0, 47, true)  -- Disable weapon
+			DisableControlAction(0, 264, true) -- Disable melee
+			DisableControlAction(0, 257, true) -- Disable melee
+			DisableControlAction(0, 140, true) -- Disable melee
+			DisableControlAction(0, 141, true) -- Disable melee
+			DisableControlAction(0, 142, true) -- Disable melee
+			DisableControlAction(0, 143, true) -- Disable melee
+			DisableControlAction(0, 75, true)  -- Disable exit vehicle
+			DisableControlAction(27, 75, true) -- Disable exit vehicle
+
+			if IsEntityPlayingAnim(playerPed, 'mp_arresting', 'idle', 3) ~= 1 then
+				ESX.Streaming.RequestAnimDict('mp_arresting', function()
+					TaskPlayAnim(playerPed, 'mp_arresting', 'idle', 8.0, -8, -1, 49, 0.0, false, false, false)
+				end)
+			end
+		else
+			Citizen.Wait(500)
+		end
+	end
 end)
 
 -- Handcuff
