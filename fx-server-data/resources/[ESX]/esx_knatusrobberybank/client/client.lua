@@ -249,20 +249,20 @@ Citizen.CreateThread(function()
 	end
 end)
 
-Citizen.CreateThread(function()
-	for k,v in pairs(Banks)do
-		local ve = v.position
-
-		local blip = AddBlipForCoord(ve.x, ve.y, ve.z)
-		SetBlipSprite(blip, 255)--156
-		SetBlipScale(blip, 0.8)
-		SetBlipColour(blip, 75)
-		SetBlipAsShortRange(blip, true)
-		BeginTextCommandSetBlipName("STRING")
-		AddTextComponentString(_U('bank_robbery'))
-		EndTextCommandSetBlipName(blip)
-	end
-end)
+--Citizen.CreateThread(function()
+--	for k,v in pairs(Banks)do
+--		local ve = v.position
+--
+--		local blip = AddBlipForCoord(ve.x, ve.y, ve.z)
+--		SetBlipSprite(blip, 255)--156
+--		SetBlipScale(blip, 0.8)
+--		SetBlipColour(blip, 75)
+--		SetBlipAsShortRange(blip, true)
+--		BeginTextCommandSetBlipName("STRING")
+--		AddTextComponentString(_U('bank_robbery'))
+--		EndTextCommandSetBlipName(blip)
+--	end
+--end)
 incircle = false
 
 Citizen.CreateThread(function()

@@ -11,10 +11,11 @@ AddEventHandler('bank:deposit', function(amount)
 	
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	if amount == nil or amount <= 0 or amount > xPlayer.getMoney() then
-		TriggerClientEvent('chatMessage', _source, "Invalid Amount")
+		TriggerClientEvent('bank:result', _source, "error", "Invalid Amount!")
 	else
 		xPlayer.removeMoney(amount)
 		xPlayer.addAccountMoney('bank', tonumber(amount))
+		TriggerClientEvent('bank:result', _source, "success", "Deposit Successful!")
 	end
 end)
 
@@ -27,10 +28,11 @@ AddEventHandler('bank:withdraw', function(amount)
 	amount = tonumber(amount)
 	base = xPlayer.getAccount('bank').money
 	if amount == nil or amount <= 0 or amount > base then
-		TriggerClientEvent('chatMessage', _source, "Invalid Amount")
+		TriggerClientEvent('bank:result', _source, "error", "Invalid Amount!")
 	else
 		xPlayer.removeAccountMoney('bank', amount)
 		xPlayer.addMoney(amount)
+		TriggerClientEvent('bank:result', _source, "success", "Withdraw Successful!")
 	end
 end)
 
@@ -40,7 +42,6 @@ AddEventHandler('bank:balance', function()
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	balance = xPlayer.getAccount('bank').money
 	TriggerClientEvent('currentbalance1', _source, balance)
-	
 end)
 
 
@@ -50,19 +51,24 @@ AddEventHandler('bank:transfer', function(to, amountt)
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local zPlayer = ESX.GetPlayerFromId(to)
 	local balance = 0
-	balance = xPlayer.getAccount('bank').money
-	zbalance = zPlayer.getAccount('bank').money
-	
-	if tonumber(_source) == tonumber(to) then
-		TriggerClientEvent('chatMessage', _source, "You cannot transfer to your self")
+
+	if(zPlayer == nil or zPlayer == -1) then
+		TriggerClientEvent('bank:result', _source, "error", "Invalid Player ID!")
 	else
-		if balance <= 0 or balance < tonumber(amountt) or tonumber(amountt) <= 0 then
-			TriggerClientEvent('chatMessage', _source, "You don't have enough money in the bank.")
-		else
-			xPlayer.removeAccountMoney('bank', amountt)
-			zPlayer.addAccountMoney('bank', amountt)
-		end
+		balance = xPlayer.getAccount('bank').money
+		zbalance = zPlayer.getAccount('bank').money
 		
+		if tonumber(_source) == tonumber(to) then
+			TriggerClientEvent('bank:result', _source, "error", "You can't transfer money to yourself.")
+		else
+			if balance <= 0 or balance < tonumber(amountt) or tonumber(amountt) <= 0 then
+				TriggerClientEvent('bank:result', _source, "error", "You don't have enough money in the bank!.")
+			else
+				xPlayer.removeAccountMoney('bank', tonumber(amountt))
+				zPlayer.addAccountMoney('bank', tonumber(amountt))
+				TriggerClientEvent('bank:result', _source, "success", "Transfer Successful!")
+			end
+		end
 	end
 end)
 

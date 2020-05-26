@@ -24,140 +24,144 @@
     			</div>
     			<nav>
     				<div class="logo-topbar"></div>
-    				<button class="btn-sign-out">Would you like to disconnect?<i class="fas fa-sign-out-alt"></i></button>
-    			</nav>
+    				<button class="btn-sign-out">Souhaitez vous etre deconnecté ?<i class="fas fa-sign-out-alt"></i></button>
+    			</nav> 
     		</div>
 <!-- ########### GENERAL ###########  -->
     		<div class="cont-content" id="general">
     			<div class="flex">
     				<div class="balance box-shadow">
-	    				<p>Welcome<br>
+	    				<p>Bienvenue<br>
 	    					<span class="name"><span class="username1"></span></span><br>
-	    					You have<br>
-	    					<span class="money"><span class="euro">$</span><span class="curbalance"></span></span>
+	    					Vous avez<br>
+	    					<span class="money"><span class="curbalance"></span><span class="dollars"> $</span></span>
 	    				</p>
 		    		</div>
 		    		<div class="list-btn">
 		    			<button class="btn btn-blue" id="deposit">
 		    				<i class="far fa-money-bill-alt"></i>
 		    				<span class="far fa-money-bill-alt icon"></span>
-		    				<p>Deposit<br>
-		    				<span>Your money is save here</span></p>
+		    				<p>Deposer<br>
+		    				<span>votre butin en lieu sur</span></p>
 		    			</button>
 			    		<button class="btn btn-violet" id="withdraw">
 			    			<i class="far fa-credit-card"></i>
 		    				<span class="far fa-credit-card icon"></span>
-		    				<p>Withdraw<br>
-		    				<span>We will give the money back you stored</span></p>
+		    				<p>Retirer<br>
+		    				<span>une partie de votre magot</span></p>
 			    		</button>
 			    		<button class="btn btn-orange" id="transfer">
 			    			<i class="fas fa-exchange-alt"></i>
 		    				<span class="fas fa-exchange-alt icon"></span>
-		    				<p>Transfer<br>
-		    				<span>Give your money to someone else</span></p>
+		    				<p>Virement<br>
+		    				<span>a un proche</span></p>
 			    		</button>
 		    		</div>
     			</div>
     			<div class="flex">
     				<div class="pub box-shadow confiance">
     					<p>
-    						<span>You can trust us</span><br>
-    						The number of BNP Paribas account creation has increased by 7% since 2017
+    						<span>Vous nous faites confiance</span><br>
+    						Le nombre de création de compte a augmenté de 7 % depuis 2017
     					</p>
     					<div class="circle-confiance"></div>
     				</div>
     				<div class="pub box-shadow social">
-    					<p>
-							<span>Start investing into companys</span><br>
-							This mode is currently not available but we will in a few years
-						</p>
+    					<p>Vous etes nombreux</p>
+    					<ul class="graph">
+    						<li class="facebook"><i class="fab fa-facebook-f"></i></li>
+    						<li class="google"><i class="fab fa-google-plus-g"></i></li>
+    						<li class="rss"><i class="fas fa-rss"></i></li>
+    						<li class="twitter"><i class="fab fa-twitter"></i></li>
+    						<li class="insta"><i class="fab fa-instagram"></i></li>
+    					</ul>
     				</div>
     			</div>
 	    	</div>
-<!-- ########### DEPOSIT ###########  -->
+<!-- ########### DEPOSER ###########  -->
 	    	<div class="cont-content" id="depositUI">
     			<div class="flex">
     				<div class="btn btn-blue banniere">
-    					<p>Deposit your money<br>
-		    			<span>We are the most secure bank of the city</span></p>
+    					<p>Deposer votre argent<br>
+		    			<span>dans le lieu le plus sécurisé de toute la ville de Los Santos</span></p>
     				</div>
     				<button class="btn btn-grey back">
     					<i class="fas fa-bars"></i>
 	    				<span class="fas fa-arrow-left icon"></span>
-	    				<p>Return<br>
-	    				<span>To the main menu</span></p>
+	    				<p>Retour<br>
+	    				<span>Au menu principal</span></p>
     				</button>
     			</div>
     			<form id="deposit1">
     				<div class="input-cont box-shadow">
-    					<label>How much do you want to diposit</label>
-    					<input id="amount" type="number" placeholder="$0">
+    					<label>Combien souhaitez vous deposer ?</label>
+    					<input id="amount" type="number" placeholder="0 $">
     				</div>
     				<button class="btn btn-green" type="submit">
     					<i class="fas fa-check"></i>
 	    				<span class="fas fa-check icon"></span>
-	    				<p>Validate<br>
-	    				<span>Your Deposit</span></p>
+	    				<p>Valider<br>
+	    				<span>Votre depot</span></p>
     				</button>
 				</form>
 	    	</div>
-<!-- ########### WITHDRAW ###########  -->
+<!-- ########### RETIRER ###########  -->
 	    	<div class="cont-content" id="withdrawUI">
     			<div class="flex">
     				<div class="btn btn-violet banniere">
-    					<p>Withdraw money<br>
-		    			<span>from you bank account</span></p>
+    					<p>Retirer de l'argent<br>
+		    			<span>depuis votre enorme magot</span></p>
     				</div>
     				<button class="btn btn-grey back">
     					<i class="fas fa-bars"></i>
 	    				<span class="fas fa-arrow-left icon"></span>
-	    				<p>Return<br>
-	    				<span>to the main menu</span></p>
+	    				<p>Retour<br>
+	    				<span>Au menu principal</span></p>
     				</button>
     			</div>
     			<form id="withdraw1">
     				<div class="input-cont box-shadow">
-    					<label>How much do you want to withdraw</label>
-    					<input id="amountw" type="number" placeholder="$0">
+    					<label>Combien souhaitez vous retirer ?</label>
+    					<input id="amountw" type="number" placeholder="0 $">
     				</div>
     				<button class="btn btn-green" type="submit">
     					<i class="fas fa-check"></i>
 	    				<span class="fas fa-check icon"></span>
-	    				<p>Validate<br>
-	    				<span>Your withdrawal</span></p>
+	    				<p>Valider<br>
+	    				<span>Votre retrait</span></p>
     				</button>
 				</form>
 	    	</div>
-<!-- ########### TRANSFER ###########  -->
+<!-- ########### VIREMENT ###########  -->
 	    	<div class="cont-content" id="transferUI">
     			<div class="flex">
     				<div class="btn btn-orange banniere">
-    					<p>Make a transfer<br>
-		    			<span>to a friend</span></p>
+    					<p>Faire un virement<br>
+		    			<span>a une des personne de votre entourage</span></p>
     				</div>
     				<button class="btn btn-grey back">
     					<i class="fas fa-bars"></i>
 	    				<span class="fas fa-arrow-left icon"></span>
-	    				<p>Return<br>
-	    				<span>To the main menu</span></p>
+	    				<p>Retour<br>
+	    				<span>Au menu principal</span></p>
     				</button>
     			</div>
     			<form id="transfer1">
     				<div class="double-input">
     					<div class="input-cont box-shadow">
-	    					<label>How much do you want to give?</label>
-	    					<input id="amountt" type="number" placeholder="$0">
+	    					<label>Combien souhaitez vous donner ?</label>
+	    					<input id="amountt" type="number" placeholder="0 $">
 	    				</div>
 	    				<div class="input-cont box-shadow">
-	    					<label>Who would you like to transfer to?</label>
-	    					<input id="to" type="text" placeholder="Last and first name">
+	    					<label>A qui souhaitez vous faire le virement ?</label>
+	    					<input id="to" type="text" placeholder="nom & prenom">
 	    				</div>
     				</div>
     				<button class="btn btn-green" type="submit">
     					<i class="fas fa-check"></i>
 	    				<span class="fas fa-check icon"></span>
-	    				<p>Validate<br>
-	    				<span>Your transfer</span></p>
+	    				<p>Valider<br>
+	    				<span>Votre virement</span></p>
     				</button>
 				</form>
 	    	</div>
@@ -165,8 +169,8 @@
 	    	<div class="cont-waiting" id="waiting">
 	    		<div class="content-waiting">
     				<div class="mainlogo"></div>
-    				<p><span>Please</span> connect<br>
-    				by the help <span>of</span> your fingerprint</p>
+    				<p><span>Veuillez</span> vous connecter<br>
+    				à l'aide <span>de</span> votre empreinte digitale</p>
     				<div id="fingerprint-content">
     					<div class="fingerprint-default"></div>
     					<div class="fingerprint-active"></div>

@@ -6877,3 +6877,5 @@
 26/05/2020 18:46:30 : Midnight - steam:11000010e1a98b9 : * takes a weapon out of the bag *
 26/05/2020 18:50:28 : Midnight - steam:11000010e1a98b9 : * takes a weapon out of the bag *
 26/05/2020 19:01:28 : Midnight - steam:11000010e1a98b9 : * takes a weapon out of the bag *
+26/05/2020 21:09:44 : Midnight - steam:11000010e1a98b9 : * pulls out a weapon *
+26/05/2020 21:17:30 : Midnight - steam:11000010e1a98b9 : * takes a weapon out of the bag *
