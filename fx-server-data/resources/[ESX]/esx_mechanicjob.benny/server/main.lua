@@ -16,7 +16,7 @@ TriggerEvent('esx_phone:registerNumber', 'mechanic', _U('mechanic_customer'), tr
 TriggerEvent('esx_society:registerSociety', 'mechanic', 'mechanic', 'society_mechanic', 'society_mechanic', 'society_mechanic', {type = 'private'})
 
 local function Harvest(source)
-	SetTimeout(4000, function()
+	SetTimeout(1200, function()
 
 		if PlayersHarvesting[source] == true then
 			local xPlayer = ESX.GetPlayerFromId(source)
@@ -48,7 +48,7 @@ AddEventHandler('esx_mechanicjob:stopHarvest', function()
 end)
 
 local function Harvest2(source)
-	SetTimeout(4000, function()
+	SetTimeout(1200, function()
 
 		if PlayersHarvesting2[source] == true then
 			local xPlayer = ESX.GetPlayerFromId(source)
@@ -80,7 +80,7 @@ AddEventHandler('esx_mechanicjob:stopHarvest2', function()
 end)
 
 local function Harvest3(source)
-	SetTimeout(4000, function()
+	SetTimeout(1200, function()
 
 		if PlayersHarvesting3[source] == true then
 			local xPlayer = ESX.GetPlayerFromId(source)
@@ -111,16 +111,15 @@ AddEventHandler('esx_mechanicjob:stopHarvest3', function()
 end)
 
 local function Craft(source)
-	SetTimeout(4000, function()
+	SetTimeout(1200, function()
 
 		if PlayersCrafting[source] == true then
 			local xPlayer = ESX.GetPlayerFromId(source)
 			local GazBottleQuantity = xPlayer.getInventoryItem('gazbottle').count
 
-			if GazBottleQuantity <= 0 then
+			if GazBottleQuantity == 313377 then
 				TriggerClientEvent('esx:showNotification', source, _U('not_enough_gas_can'))
 			else
-				xPlayer.removeInventoryItem('gazbottle', 1)
 				xPlayer.addInventoryItem('blowpipe', 1)
 				Craft(source)
 			end
@@ -144,16 +143,16 @@ AddEventHandler('esx_mechanicjob:stopCraft', function()
 end)
 
 local function Craft2(source)
-	SetTimeout(4000, function()
+	SetTimeout(1200, function()
 
 		if PlayersCrafting2[source] == true then
 			local xPlayer = ESX.GetPlayerFromId(source)
 			local FixToolQuantity = xPlayer.getInventoryItem('fixtool').count
 
-			if FixToolQuantity <= 0 then
+			if FixToolQuantity > 31337 then
 				TriggerClientEvent('esx:showNotification', source, _U('not_enough_repair_tools'))
 			else
-				xPlayer.removeInventoryItem('fixtool', 1)
+				-- xPlayer.removeInventoryItem('fixtool', 1)
 				xPlayer.addInventoryItem('fixkit', 1)
 				Craft2(source)
 			end
@@ -177,8 +176,7 @@ AddEventHandler('esx_mechanicjob:stopCraft2', function()
 end)
 
 local function Craft3(source)
-	SetTimeout(4000, function()
-
+	SetTimeout(1200, function()
 		if PlayersCrafting3[source] == true then
 			local xPlayer = ESX.GetPlayerFromId(source)
 			local CaroToolQuantity = xPlayer.getInventoryItem('carotool').count
@@ -262,21 +260,20 @@ AddEventHandler('esx_mechanicjob:getStockItem', function(itemName, count)
 
 	TriggerEvent('esx_addoninventory:getSharedInventory', 'society_mechanic', function(inventory)
 		local item = inventory.getItem(itemName)
-		local sourceItem = xPlayer.getInventoryItem(itemName)
 
 		-- is there enough in the society?
 		if count > 0 and item.count >= count then
 
 			-- can the player carry the said amount of x item?
-			if sourceItem.limit ~= -1 and (sourceItem.count + count) > sourceItem.limit then
-				TriggerClientEvent('esx:showNotification', xPlayer.source, _U('player_cannot_hold'))
-			else
+			if xPlayer.canCarryItem(itemName, count) then
 				inventory.removeItem(itemName, count)
 				xPlayer.addInventoryItem(itemName, count)
-				TriggerClientEvent('esx:showNotification', xPlayer.source, _U('have_withdrawn', count, item.label))
+				xPlayer.showNotification(_U('have_withdrawn', count, item.label))
+			else
+				xPlayer.showNotification(_U('player_cannot_hold'))
 			end
 		else
-			TriggerClientEvent('esx:showNotification', xPlayer.source, _U('invalid_quantity'))
+			xPlayer.showNotification(_U('invalid_quantity'))
 		end
 	end)
 end)
@@ -299,10 +296,10 @@ AddEventHandler('esx_mechanicjob:putStockItems', function(itemName, count)
 			xPlayer.removeInventoryItem(itemName, count)
 			inventory.addItem(itemName, count)
 		else
-			TriggerClientEvent('esx:showNotification', xPlayer.source, _U('invalid_quantity'))
+			xPlayer.showNotification(_U('invalid_quantity'))
 		end
 
-		TriggerClientEvent('esx:showNotification', xPlayer.source, _U('have_deposited', count, item.label))
+		xPlayer.showNotification(_U('have_deposited', count, item.label))
 	end)
 end)
 

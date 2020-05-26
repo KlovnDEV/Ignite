@@ -1,8 +1,9 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+--fx_version 'adamant'
+--game 'gta5'
 
-description 'ESX Mechanic Job'
+--description 'ESX Mechanic Job'
 
-version '1.1.0'
+--version '1.1.0'
 
 client_scripts {
 	'@es_extended/locale.lua',
@@ -12,6 +13,7 @@ client_scripts {
 	'locales/br.lua',
 	'locales/sv.lua',
 	'locales/pl.lua',
+	'locales/nl.lua',
 	'config.lua',
 	'client/main.lua'
 }
@@ -24,6 +26,13 @@ server_scripts {
 	'locales/br.lua',
 	'locales/sv.lua',
 	'locales/pl.lua',
+	'locales/nl.lua',
 	'config.lua',
 	'server/main.lua'
+}
+
+dependencies {
+	'es_extended',
+	'esx_society',
+	'esx_billing'
 }
