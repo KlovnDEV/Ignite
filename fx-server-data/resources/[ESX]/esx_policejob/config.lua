@@ -137,10 +137,12 @@ Config.AuthorizedVehicles = {
 	    --{ model = 'police2', label = 'Audi S4', price = 100 },
         --{ model = 'police3', label = 'Ford Mondeo', price = 100 }
 	},
+
 --Special Constable
 	recruit = {
 
 	},
+	
 --Constable
 	officer = {
 		{ model = 'police3', label = 'Ford Mondeo', price = 100 }
