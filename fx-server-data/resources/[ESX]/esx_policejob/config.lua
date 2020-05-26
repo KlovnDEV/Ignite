@@ -137,30 +137,34 @@ Config.AuthorizedVehicles = {
 	    --{ model = 'police2', label = 'Audi S4', price = 100 },
         --{ model = 'police3', label = 'Ford Mondeo', price = 100 }
 	},
-
+--Special Constable
 	recruit = {
 
 	},
-
+--Constable
 	officer = {
 		{ model = 'police3', label = 'Ford Mondeo', price = 100 }
 	},
 
+--Sergeant
 	sergeant = {
 		 { model = 'police2', label = 'Audi S4 Quattro', price = 100 },
          { model = 'police3', label = 'Ford Mondeo', price = 100 }
 	},
 
+--Chief Inspector
 	intendent = {
 
 	},
 
+--Deputy Chief Constable
 	lieutenant = {
 		 { model = 'sheriff', label = 'Marked Evo 9', price = 100 },
          { model = 'police2', label = 'Audi A4 Quattro', price = 100 },
          { model = 'police3', label = 'Ford Mondeo', price = 100 }
 	},
 
+--Chief Constable
 	chef = {
 
         { model = 'police', label = 'Subaru Impreza WRX', price = 100 },
@@ -168,23 +172,24 @@ Config.AuthorizedVehicles = {
 		{ model = 'police3', label = 'Ford Mondeo', price = 100 },
 		{ model = 'police4', label = 'BMW M5 F90', price = 100 },
 		{ model = 'sheriff2', label = 'Jaguar F-Pace', price = 100 },
+		{ model = 'sheriff', label = 'Jaguar F-Pace Unmarked', price = 100 },
 		{ model = 'fbi2', label = 'Jaguar XFR-S Unmarked', price = 100 },
 		{ model = 'fbi', label = 'Jaguar XFR-S', price = 100 },
-		{ model = 'policeb', label = 'BMW R1150RT', price = 100 },
-		{ model = 'sheriff', label = 'Jaguar F-Pace Unmarked', price = 100 }
+		{ model = 'policeb', label = 'BMW R1150RT', price = 100 }
 
 	},
 
 	boss = {
+
         { model = 'police', label = 'Subaru Impreza WRX', price = 100 },
 		{ model = 'police2', label = 'Audi A4 Quattro', price = 100 },
+		{ model = 'police3', label = 'Ford Mondeo', price = 100 },
 		{ model = 'police4', label = 'BMW M5 F90', price = 100 },
-        { model = 'police3', label = 'Ford Mondeo', price = 100 },
-        { model = 'sheriff2', label = 'Jaguar F-Pace', price = 100 },
-        { model = 'fbi', label = 'Jaguar XFR-S', price = 100 },
-        { model = 'fbi2', label = 'Jaguar XFR-S Unmarked', price = 100 },
-	    { model = 'policeb', label = 'BMW R1150RT', price = 100 },
-	    { model = 'sheriff', label = 'Jaguar F-Pace Unmarked', price = 100 }
+		{ model = 'sheriff2', label = 'Jaguar F-Pace', price = 100 },
+		{ model = 'sheriff', label = 'Jaguar F-Pace Unmarked', price = 100 },
+		{ model = 'fbi2', label = 'Jaguar XFR-S Unmarked', price = 100 },
+		{ model = 'fbi', label = 'Jaguar XFR-S', price = 100 },
+		{ model = 'policeb', label = 'BMW R1150RT', price = 100 }
 
 	}
 }
