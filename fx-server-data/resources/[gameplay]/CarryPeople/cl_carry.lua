@@ -1,7 +1,4 @@
 local carryingBackInProgress = false
-local carryAnimNamePlaying = ""
-local carryAnimDictPlaying = ""
-local carryControlFlagPlaying = 0
 
 RegisterCommand("carry",function(source, args)
 	print("carrying")
@@ -23,8 +20,8 @@ RegisterCommand("carry",function(source, args)
 		local closestPlayer = GetClosestPlayer(3)
 		target = GetPlayerServerId(closestPlayer)
 		if closestPlayer ~= nil then
-			print("triggering CarryPeople:sync")
-			TriggerServerEvent('CarryPeople:sync', closestPlayer, lib,lib2, anim1, anim2, distans, distans2, height,target,length,spin,controlFlagMe,controlFlagTarget,animFlagTarget)
+			print("triggering cmg2_animations:sync")
+			TriggerServerEvent('cmg2_animations:sync', closestPlayer, lib,lib2, anim1, anim2, distans, distans2, height,target,length,spin,controlFlagMe,controlFlagTarget,animFlagTarget)
 		else
 			print("[CMG Anim] No player nearby")
 		end
@@ -34,16 +31,16 @@ RegisterCommand("carry",function(source, args)
 		DetachEntity(GetPlayerPed(-1), true, false)
 		local closestPlayer = GetClosestPlayer(3)
 		target = GetPlayerServerId(closestPlayer)
-		TriggerServerEvent("CarryPeople:stop",target)
+		TriggerServerEvent("cmg2_animations:stop",target)
 	end
 end,false)
 
-RegisterNetEvent('CarryPeople:syncTarget')
-AddEventHandler('CarryPeople:syncTarget', function(target, animationLib, animation2, distans, distans2, height, length,spin,controlFlag)
+RegisterNetEvent('cmg2_animations:syncTarget')
+AddEventHandler('cmg2_animations:syncTarget', function(target, animationLib, animation2, distans, distans2, height, length,spin,controlFlag)
 	local playerPed = GetPlayerPed(-1)
 	local targetPed = GetPlayerPed(GetPlayerFromServerId(target))
 	carryingBackInProgress = true
-	print("triggered CarryPeople:syncTarget")
+	print("triggered cmg2_animations:syncTarget")
 	RequestAnimDict(animationLib)
 
 	while not HasAnimDictLoaded(animationLib) do
@@ -55,10 +52,10 @@ AddEventHandler('CarryPeople:syncTarget', function(target, animationLib, animati
 	TaskPlayAnim(playerPed, animationLib, animation2, 8.0, -8.0, length, controlFlag, 0, false, false, false)
 end)
 
-RegisterNetEvent('CarryPeople:syncMe')
-AddEventHandler('CarryPeople:syncMe', function(animationLib, animation,length,controlFlag,animFlag)
+RegisterNetEvent('cmg2_animations:syncMe')
+AddEventHandler('cmg2_animations:syncMe', function(animationLib, animation,length,controlFlag,animFlag)
 	local playerPed = GetPlayerPed(-1)
-	print("triggered CarryPeople:syncMe")
+	print("triggered cmg2_animations:syncMe")
 	RequestAnimDict(animationLib)
 
 	while not HasAnimDictLoaded(animationLib) do
@@ -71,8 +68,8 @@ AddEventHandler('CarryPeople:syncMe', function(animationLib, animation,length,co
 	Citizen.Wait(length)
 end)
 
-RegisterNetEvent('CarryPeople:cl_stop')
-AddEventHandler('CarryPeople:cl_stop', function()
+RegisterNetEvent('cmg2_animations:cl_stop')
+AddEventHandler('cmg2_animations:cl_stop', function()
 	carryingBackInProgress = false
 	ClearPedSecondaryTask(GetPlayerPed(-1))
 	DetachEntity(GetPlayerPed(-1), true, false)
