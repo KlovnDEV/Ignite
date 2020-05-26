@@ -46,7 +46,7 @@ function drawTxt(x,y ,width,height,scale, text, r,g,b,a, outline)
 	end
     SetTextEntry("STRING")
     AddTextComponentString(text)
-    DrawText(x - width/2, y - height/2 + 0.005)
+    DrawText(0.5, 0.95)
 end
 
 RegisterNetEvent('esx_holdupbank:currentlyrobbing')
@@ -60,10 +60,10 @@ RegisterNetEvent('esx_holdupbank:currentlyhacking')
 AddEventHandler('esx_holdupbank:currentlyhacking', function(robb, thisbank)
 	hackholdingup = true
 	TriggerEvent("mhacking:show")
-	TriggerEvent("mhacking:start",7,150, opendoors)
+	TriggerEvent("mhacking:start",7,28, opendoors)
 	savedbank = thisbank
 	bank = robb
-	secondsRemaining = 300
+	secondsRemaining = 30
 end)
 
 RegisterNetEvent('esx_holdupbank:plantingbomb')
@@ -73,7 +73,7 @@ AddEventHandler('esx_holdupbank:plantingbomb', function(robb, thisbank)
 	savedbank = thisbank
 	bank = robb
 	plantBombAnimation()
-	secondsRemaining = 20
+	secondsRemaining = 15
 end)
 
 
@@ -198,7 +198,7 @@ RegisterNetEvent('esx_holdupbank:opendoors')
 AddEventHandler('esx_holdupbank:opendoors', function(x,y,z,doortype)
 	dooropen = true;
 	
-	ESX.ShowNotification("X: "..x)
+	-- ESX.ShowNotification("X: "..x)
 		
 	local coords = vector3(x,y,z) -- fix for vectors
 	local obs, distance = ESX.Game.GetClosestObject(doortype, coords) -- instant open for people already in site
