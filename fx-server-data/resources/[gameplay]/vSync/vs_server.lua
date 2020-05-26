@@ -19,7 +19,7 @@ debugprint = false -- don't touch this unless you know what you're doing or you'
 
 
 
--------------------- DON'T CHANGE THIS --------------------
+-- Availale Weather Types To Cycle Through 
 AvailableWeatherTypes = {
     'EXTRASUNNY', 
     'CLEAR', 
@@ -30,19 +30,14 @@ AvailableWeatherTypes = {
     'CLOUDS', 
     'CLEARING', 
     'RAIN', 
-    'THUNDER', 
-    'SNOW', 
-    'BLIZZARD', 
-    'SNOWLIGHT', 
-    'XMAS', 
-    'HALLOWEEN',
+    'THUNDER' 
 }
 CurrentWeather = "EXTRASUNNY"
 local baseTime = 0
 local timeOffset = 0
 local freezeTime = false
 local blackout = false
-local newWeatherTimer = 10
+local newWeatherTimer = 60 -- 60 Minutes
 
 RegisterServerEvent('vSync:requestSync')
 AddEventHandler('vSync:requestSync', function()
