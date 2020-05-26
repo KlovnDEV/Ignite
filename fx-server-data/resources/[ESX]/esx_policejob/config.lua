@@ -133,7 +133,7 @@ Config.AuthorizedWeapons = {
 Config.AuthorizedVehicles = {
 	Shared = {
 		--{ model = 'pbus', label = 'Police Prison Bus', price = 0 },
-		{ model = 'policet', label = 'Transport Van', price = 100 },
+		{ model = 'policet', label = 'Mercedes Vito ARV ', price = 100 },
 	    --{ model = 'police2', label = 'Audi S4', price = 100 },
         --{ model = 'police3', label = 'Ford Mondeo', price = 100 }
 	},
@@ -147,7 +147,7 @@ Config.AuthorizedVehicles = {
 	},
 
 	sergeant = {
-		 { model = 'police2', label = 'Audi S4', price = 100 },
+		 { model = 'police2', label = 'Audi S4 Quattro', price = 100 },
          { model = 'police3', label = 'Ford Mondeo', price = 100 }
 	},
 
@@ -157,34 +157,34 @@ Config.AuthorizedVehicles = {
 
 	lieutenant = {
 		 { model = 'sheriff', label = 'Marked Evo 9', price = 100 },
-         { model = 'police2', label = 'Audi S4', price = 100 },
+         { model = 'police2', label = 'Audi A4 Quattro', price = 100 },
          { model = 'police3', label = 'Ford Mondeo', price = 100 }
 	},
 
 	chef = {
 
-		{ model = 'pbus', label = 'Police Prison Bus', price = 100 },
-        { model = 'police', label = 'Volvo', price = 100 },
-		{ model = 'police2', label = 'Police Interceptor II', price = 100 },
-		{ model = 'police3', label = 'Police Interceptor III', price = 100 },
-		{ model = 'sheriff2', label = 'BMW xDrive Unmarked', price = 100 },
-		{ model = 'fbi2', label = 'BMW x5', price = 100 },
-		{ model = 'fbi', label = 'Undercover Vehicle', price = 100 },
-		{ model = 'policeb', label = 'Police Bike', price = 100 },
-		{ model = 'sheriff', label = 'Skoda Karoq', price = 100 }
+        { model = 'police', label = 'Subaru Impreza WRX', price = 100 },
+		{ model = 'police2', label = 'Audi A4 Quattro', price = 100 },
+		{ model = 'police3', label = 'Ford Mondeo', price = 100 },
+		{ model = 'police4', label = 'BMW M5 F90', price = 100 },
+		{ model = 'sheriff2', label = 'Jaguar F-Pace', price = 100 },
+		{ model = 'fbi2', label = 'Jaguar XFR-S Unmarked', price = 100 },
+		{ model = 'fbi', label = 'Jaguar XFR-S', price = 100 },
+		{ model = 'policeb', label = 'BMW R1150RT', price = 100 },
+		{ model = 'sheriff', label = 'Jaguar F-Pace Unmarked', price = 100 }
 
 	},
 
 	boss = {
-         { model = 'pbus', label = 'Police Prison Bus', price = 100 },
-        { model = 'police', label = 'Volvo', price = 100 },
-        { model = 'police2', label = 'Police Interceptor II', price = 100 },
-        { model = 'police3', label = 'Police Interceptor III', price = 100 },
-        { model = 'sheriff2', label = 'BMW xDrive Unmarked', price = 100 },
-        { model = 'fbi2', label = 'BMW x5', price = 100 },
-        { model = 'fbi', label = 'Undercover Vehicle', price = 100 },
-	    { model = 'policeb', label = 'Police Bike', price = 100 },
-	    { model = 'sheriff', label = 'Skoda Karoq', price = 100 }
+        { model = 'police', label = 'Subaru Impreza WRX', price = 100 },
+		{ model = 'police2', label = 'Audi A4 Quattro', price = 100 },
+		{ model = 'police4', label = 'BMW M5 F90', price = 100 },
+        { model = 'police3', label = 'Ford Mondeo', price = 100 },
+        { model = 'sheriff2', label = 'Jaguar F-Pace', price = 100 },
+        { model = 'fbi', label = 'Jaguar XFR-S', price = 100 },
+        { model = 'fbi2', label = 'Jaguar XFR-S Unmarked', price = 100 },
+	    { model = 'policeb', label = 'BMW R1150RT', price = 100 },
+	    { model = 'sheriff', label = 'Jaguar F-Pace Unmarked', price = 100 }
 
 	}
 }

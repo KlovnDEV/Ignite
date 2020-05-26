@@ -1,5 +1,5 @@
 {
-  "reseau": "Ignite 5G",
+  "reseau": "IgniteLite",
   
   "themeColor": "#303f9f",
   "colors": [
@@ -27,13 +27,13 @@
   "useFormatNumberFrance": false,
 
   "background" : {
-    "Calvin & Hobbes": "back001.jpg",
-    "Destiny": "back002.jpg",
-    "Stormtrooper": "back003.jpg",
+    "Space": "back001.jpg",
+    "Marble": "back002.jpg",
+    "Fareground": "back003.jpg",
     "Custom URL": "URL"
   },
   "background_default": {
-    "label": "Calvin & Hobbes",
+    "label": "Space",
     "value": "back001.jpg"
   },
 
@@ -56,7 +56,7 @@
       "backgroundColor": "blue",
       "subMenu": [
         {
-          "title": "Send Message",
+          "title": "Message",
           "eventName": "esx_addons_gcphone:call",
           "type": {
             "number": "police"
@@ -69,7 +69,7 @@
       "backgroundColor": "red",
       "subMenu": [
         {
-          "title": "Send a Message",
+          "title": "Message",
           "eventName": "esx_addons_gcphone:call",
           "type": {
             "number": "ambulance"
@@ -82,25 +82,36 @@
       "backgroundColor": "green",
       "subMenu": [
         {
-          "title": "Send a Message",
+          "title": "Message",
           "eventName": "esx_addons_gcphone:call",
           "type": {
             "number": "mechanic"
           }
         }
       ]
+    },
+    {
+      "display": "Uber",
+      "backgroundColor": "yellow",
+      "subMenu": [{
+        "title": "Message",
+        "eventName": "esx_addons_gcphone:call",
+        "type": {
+          "number": "taxi"
+        }
+      }]
     }
   ],
 
   "apps": [
     {
-      "name": "Phone",
+      "name": "Telephone",
       "icons": "/html/static/img/icons_app/call.png",
       "routeName": "appels",
       "inHomePage": true
     },
     {
-      "name": "iMessage",
+      "name": "Messages",
       "icons": "/html/static/img/icons_app/sms.png",
       "routeName": "messages",
       "inHomePage": true,
@@ -123,6 +134,17 @@
       "icons": "/html/static/img/icons_app/bank.png",
       "routeName": "bank",
       "inHomePage": false
+    },
+    {
+      "name": "Bourse",
+      "icons": "/html/static/img/icons_app/bourse.png",
+      "routeName": "bourse",
+      "enabled": false
+    },
+    {
+      "name": "Photo",
+      "icons": "/html/static/img/icons_app/photo.png",
+      "routeName": "photo"
     },
     {
       "name": "Telegram",

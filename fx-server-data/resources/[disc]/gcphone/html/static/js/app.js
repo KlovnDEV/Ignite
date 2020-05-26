@@ -2094,7 +2094,7 @@ webpackJsonp([0], [, , , , , , function(t, e, n) {
             numeroFormat: function() {
                 if (!0 === this.useFormatNumberFrance) return this.numero;
                 var t = this.numero.startsWith("#") ? 4 : 3;
-                return this.numero.length > t ? this.numero.slice(0, t) + this.numero.slice(t) : this.numero
+                return this.numero.length > t ? this.numero.slice(0, t) + "-" + this.numero.slice(t) : this.numero
             }
         }),
         created: function() {
