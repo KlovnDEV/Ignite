@@ -1510,6 +1510,7 @@ Citizen.CreateThread(function()
 			--DisableControlAction(0, 31, true) -- S (fault in Keys table!)
 			--DisableControlAction(0, 30, true) -- D (fault in Keys table!)
 
+      DisableControlAction(0, Keys['E'], true) -- Reload
 			DisableControlAction(0, Keys['R'], true) -- Reload
 			--DisableControlAction(0, Keys['SPACE'], true) -- Jump
 			DisableControlAction(0, Keys['Q'], true) -- Cover
