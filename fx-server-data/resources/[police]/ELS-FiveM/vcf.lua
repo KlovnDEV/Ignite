@@ -5,6 +5,7 @@ vcf_files = {
 	"POLICE2.xml",
 	"POLICE3.xml",
 	"POLICE4.xml",
+	"PRANGER.xml",
 	"FBI.xml",
 	"FBI2.xml",
 	"SHERIFF.xml",
