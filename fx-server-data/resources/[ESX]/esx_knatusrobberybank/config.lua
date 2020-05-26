@@ -1,6 +1,6 @@
 Config = {}
 Config.Locale = 'en'
-Config.NumberOfCopsRequired = 3
+Config.NumberOfCopsRequired = 0
 
 --Updated to choose between cash or black money
 Config.moneyType = 'black' -- 'cash' or 'black'
@@ -19,7 +19,7 @@ Banks = {
 		position = { ['x'] = -2954.2874804688, ['y'] = 486.14476367188, ['z'] = 15.697026252747 }, --2957.6674804688
 		hackposition = { ['x'] = -2957.6674804688, ['y'] = 481.45776367188, ['z'] = 15.697026252747 },
 		
-		reward = math.random(130000,175000),,
+		reward = math.random(130000,175000),
 		nameofbank = "Fleeca Bank (Highway)",
 		lastrobbed = 0,
 		doortype = 'hei_prop_heist_sec_door'
