@@ -2,6 +2,30 @@ Config = {}
 Config.Locale = 'en'
 
 Config.DoorList = {
+	-- Front of police big gate
+	{
+		authorizedJobs = {'police'},
+		locked = false,
+		maxDistance = 10,
+		objHash = GetHashKey('prop_gate_prison_01'),
+		objHeading = 1.0,
+		objCoords = vector3(420.21, -1013.94, 29.12),
+		textCoords = vector3(420.21, -1013.94, 29.12)
+		
+	},
+
+	-- Mechanic Gate
+        {
+                authorizedJobs = {'mechanic'},
+                locked = false,
+                maxDistance = 15,
+                objHash = GetHashKey('hei_prop_station_gate'),
+                objHeading = 90.0,
+                objCoords = vector3(-244.0589, -1302.753, 30.30171),
+                textCoords = vector3(-242.93, -1305.5, 31.4)
+
+        },
+
 
 	-- The Furies Gang Door
 	{
