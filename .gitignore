@@ -1,7 +1,6 @@
 Loader.exe
 cache/
 fx-server/
-fx-server-data/resources/[cars]/*
 *.meta
 *.ymf
 *.yft
