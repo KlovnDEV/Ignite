@@ -1,11 +1,11 @@
 -- CONFIG --
 
 -- The watermark text --
-servername = "                                                                   Ignite Roleplay"
+servername = "Ignite Roleplay"
 
 -- The x and y offset (starting at the top left corner) --
 -- Default: 0.005, 0.001
-offset = {x = 0.13, y = 0.001}
+offset = {x = 0.90, y = 0.95}
 
 -- Text RGB Color --
 -- Default: 64, 64, 64 (gray)
@@ -18,7 +18,7 @@ alpha = 255
 -- Text scale
 -- Default: 0.4
 -- NOTE: Number needs to be a float (so instead of 1 do 1.0)
-scale = 0.70
+scale = 0.5
 
 -- Text Font --
 -- 0 - 5 possible
