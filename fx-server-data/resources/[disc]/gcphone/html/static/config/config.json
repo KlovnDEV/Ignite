@@ -105,13 +105,13 @@
 
   "apps": [
     {
-      "name": "Telephone",
+      "name": "Phone",
       "icons": "/html/static/img/icons_app/call.png",
       "routeName": "appels",
       "inHomePage": true
     },
     {
-      "name": "Messages",
+      "name": "iMessage",
       "icons": "/html/static/img/icons_app/sms.png",
       "routeName": "messages",
       "inHomePage": true,
