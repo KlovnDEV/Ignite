@@ -4,7 +4,7 @@ Locales['en'] = {
   ['free_prop'] = 'Property For Sale',
   ['property'] = 'Property',
   ['enter'] = 'Enter',
-  ['move_out'] = 'Remove',
+  ['move_out'] = 'Move out',
   ['move_out_sold'] = 'Sell Property for: <span style="color:green;">$%s</span>',
   ['moved_out'] = 'You have now moved out!',
   ['moved_out_sold'] = 'You have sold the property for: ~g~$%s~s~',

@@ -811,7 +811,7 @@ Citizen.CreateThread(function()
 
 				if distance < Config.DrawDistance then
 					DrawMarker(Config.MarkerType, property.entering.x, property.entering.y, property.entering.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.MarkerSize.x, Config.MarkerSize.y, Config.MarkerSize.z, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, false, nil, nil, false)
-					ESX.Game.Utils.DrawText3D(property.entering, property.name, 2)
+					-- ESX.Game.Utils.DrawText3D(property.entering, property.name, 2)
 					letSleep = false
 				end
 
