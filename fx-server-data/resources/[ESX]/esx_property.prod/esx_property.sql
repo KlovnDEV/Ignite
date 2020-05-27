@@ -1,4 +1,4 @@
-USE `es_extended`;
+USE `essentialmode`;
 
 ALTER TABLE `users`
   ADD COLUMN `last_property` VARCHAR(255) NULL

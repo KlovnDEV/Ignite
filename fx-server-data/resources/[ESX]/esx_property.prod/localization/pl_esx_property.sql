@@ -1,19 +1,19 @@
-USE `es_extended`;
+USE `essentialmode`;
 
 ALTER TABLE `users`
   ADD COLUMN `last_property` VARCHAR(255) NULL
 ;
 
 INSERT INTO `addon_account` (name, label, shared) VALUES
-  ('property_black_money','Money Sale Property',0)
+  ('property_black_money','Mieszkanie na sprzedaż',0)
 ;
 
 INSERT INTO `addon_inventory` (name, label, shared) VALUES
-  ('property','Property',0)
+  ('property','Mieszkanie',0)
 ;
 
 INSERT INTO `datastore` (name, label, shared) VALUES
-  ('property','Property',0)
+  ('property','Mieszkanie',0)
 ;
 
 CREATE TABLE `owned_properties` (
